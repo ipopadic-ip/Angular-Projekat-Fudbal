@@ -1,0 +1,54 @@
+<div>
+    <h1 class="promo-title">Liga Srbije</h1>
+</div>
+
+<table mat-table [dataSource]="filteredTeams" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+      <th class="table-data" mat-header-cell *matHeaderCellDef> # </th>
+      <td class="table-data" mat-cell *matCellDef="let tim"> {{tim.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="naziv">
+      <th class="table-data" mat-header-cell *matHeaderCellDef> Timovi </th>
+      <td class="table-data" mat-cell *matCellDef="let tim"> {{tim.naziv}} </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> 
+  
+  <div class="background-container"></div>
+
+  <input class="input" type="text" [(ngModel)]="searchInput">
+  <button mat-raised-button class="button" color="primary" (click)="Search()">Search</button>
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form class="example" action="action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form> -->
+
+<!-- DRUGA TABELA -->
+
+  <!-- <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="datum">
+      <th class="table-data" mat-header-cell *matHeaderCellDef> Datum </th>
+      <td class="table-data" mat-cell *matCellDef="let date"> {{date.datum}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ime">
+      <th class="table-data" mat-header-cell *matHeaderCellDef> Domaći </th>
+      <td class="table-data" mat-cell *matCellDef="let tim1"> {{tim1.ime}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ime1">
+        <th class="table-data" mat-header-cell *matHeaderCellDef> Domaći </th>
+        <td class="table-data" mat-cell *matCellDef="let tim2"> {{tim2.ime1}} </td>
+      </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+  </table>  -->

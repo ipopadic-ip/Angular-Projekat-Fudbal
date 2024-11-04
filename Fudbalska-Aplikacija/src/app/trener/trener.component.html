@@ -1,0 +1,42 @@
+<div>
+    <h1 class="promo-title">Trener</h1>
+</div>
+
+
+
+<table mat-table [dataSource]="filteredTeams" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="name">
+    <th class="table-data" mat-header-cell *matHeaderCellDef> Treneri </th>
+    <td class="table-data" mat-cell *matCellDef="let trener"> {{trener.name}} </td>
+  </ng-container>
+  
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> 
+
+<div class="background-container"></div>
+
+  <input class="input" type="text" [(ngModel)]="searchInput">
+  <button mat-raised-button class="button3" color="primary" (click)="Search()">Search</button>
+
+  <!-- <mat-form-field class="button" appearance="fill">
+    <mat-label>Trener</mat-label>
+    <mat-select name="trener" [(ngModel)]= "trener">
+      <mat-option *ngFor="let trener of treneri" [value]="trener">{{trener}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Tim</mat-label>
+    <mat-select name="tim" [(ngModel)]= "tim">
+      <mat-option *ngFor="let tim of timovi" [value]="tim.naziv">{{tim.naziv}}</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+  <!-- <section>
+    <div class="example-button-row">
+      <button mat-raised-button class="button2" color="primary" (click)="dodajTrenera()">Dodaj trenera</button> -->
+      <!-- <button mat-raised-button color="primary" (click)="dodajTim()" >Potvrdi</button> -->
+    <!-- </div> -->
+  <!-- </section> -->

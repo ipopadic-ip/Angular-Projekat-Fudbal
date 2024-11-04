@@ -1,0 +1,55 @@
+<div>
+    <h1 class="promo-title">Utakmice</h1>
+</div>
+
+<div class="background-container"></div>
+
+<button mat-raised-button class="button" color="primary" (click)="Dodaj()">Dodajte utakmicu</button>
+
+<!-- <ol>DIALOG
+    <li>
+      <mat-form-field>
+        <mat-label>What's your name?</mat-label>
+        <input matInput [(ngModel)]="name">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <li *ngIf="animal">
+      You chose: <i>{{animal}}</i>
+    </li>
+  </ol> -->
+
+ <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="datum">
+      <th class="table-data" mat-header-cell *matHeaderCellDef> Datum </th>
+      <td class="table-data" mat-cell *matCellDef="let date"> {{date.datum | date}} </td>      
+    </ng-container>
+
+    <ng-container matColumnDef="domacin">
+      <th class="table-data" mat-header-cell *matHeaderCellDef> Domaći </th>
+      <td class="table-data" mat-cell *matCellDef="let tim1"> {{tim1.domacin}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="gost">
+        <th class="table-data" mat-header-cell *matHeaderCellDef> Gosti </th>
+        <td class="table-data" mat-cell *matCellDef="let tim2"> {{tim2.gost}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="index">
+        <th class="table-data" mat-header-cell *matHeaderCellDef> Izbriši </th>
+        <td class="table-data" mat-cell *matCellDef="let dataSource; let i = index"> 
+          <button mat-raised-button  color="warn" focusable="false" (click)="deleteUtakmica(i)">
+          <!-- <i class="fa fa-times mat-icon"></i>-->Izbriši  
+          </button>
+       </td>
+      </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> 
+
+  
+

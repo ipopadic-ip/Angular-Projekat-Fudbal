@@ -1,0 +1,8 @@
+.example-spacer {
+    flex: 1 1 auto;
+    /* background: linear-gradient(to right, #155799, #159957); */
+  }
+
+  .pointer{
+      cursor: pointer;
+  }

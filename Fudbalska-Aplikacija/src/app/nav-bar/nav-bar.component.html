@@ -1,0 +1,37 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/liga">
+          <span>Liga</span>
+        </button>
+        <button mat-menu-item routerLink="/utakmice">
+          <span>Utakmice</span>
+        </button>
+        <button mat-menu-item routerLink="/timovi">
+          <span>Timovi</span>
+        </button>
+        <!-- <button mat-menu-item routerLink="/igraci">
+            <span>Igrači</span>
+        </button> -->
+        <button mat-menu-item routerLink="/trener">
+            <span>Trener</span>
+          </button>  
+      </mat-menu>
+    <span class="pointer" routerLink="/home">Fudbalski Svet</span>
+    <!-- <span class="example-spacer"></span> -->
+
+    <button mat-button routerLink="/liga">Liga</button>
+    <button mat-button routerLink="/utakmice">Utakmice</button>
+    <button mat-button routerLink="/timovi">Timovi</button>
+    <!-- <button mat-button routerLink="/igraci">Igrači</button> -->
+    <button mat-button routerLink="/trener">Trener</button>
+    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button> -->
+  </mat-toolbar>
+  

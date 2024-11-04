@@ -1,0 +1,23 @@
+<div class="ok-cancel-wrapper">
+    <h2 mat-dialog-title>Dodajte tim</h2>
+    <mat-dialog-content>
+
+        <mat-form-field class="example-form-field">
+            <mat-label>Dodajte tim</mat-label>
+            <input matInput type="text" [(ngModel)]="naziv">
+            <button *ngIf="naziv" matSuffix mat-icon-button aria-label="Clear" (click)="naziv=''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        
+          <!-- <section>
+            <div class="example-button-row">
+              <button mat-raised-button class="button2" color="primary" (click)="dodajTim()">Dodaj tim</button>
+            </div>
+          </section> -->
+    </mat-dialog-content>
+    <mat-dialog-actions style="clear: both; margin-top: 20px;">
+      <button mat-raised-button mat-dialog-close color="primary" (click)="dodajTim()" >Potvrdi</button>
+      <button mat-button mat-dialog-close>Odustani</button>
+    </mat-dialog-actions>
+  </div>

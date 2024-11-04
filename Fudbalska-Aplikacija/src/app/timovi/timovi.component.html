@@ -1,0 +1,52 @@
+<div>
+    <h1 class="promo-title">Timovi</h1>
+</div>
+
+<div class="background-container"></div>
+
+
+<!-- <mat-form-field class="example-form-field">
+    <mat-label>Dodajte tim</mat-label>
+    <input matInput type="text" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button class="button2" color="primary" (click)="dodajTim()">Dodaj tim</button>
+    </div>
+  </section> -->
+
+  <button mat-raised-button class="button" color="primary" (click)="Dodaj()">Dodajte tim</button>
+  <button mat-raised-button class="button1" color="primary" (click)="DodajIgraca()">Dodajte igraca</button>
+<div class="table1">
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="naziv">
+      <th class="table-data" mat-header-cell *matHeaderCellDef> Timovi </th>
+      <td class="table-data pointer" mat-cell *matCellDef="let tim" (click)="prikaziIgrace(tim.id)"> {{tim.naziv}} </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> 
+
+</div>
+  
+<div class="table2">
+
+  <table mat-table [dataSource]="filteredPlayers" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="naziv">
+      <th class="table-data" mat-header-cell *matHeaderCellDef> Igraci </th>
+      <td class="table-data" mat-cell *matCellDef="let tim3"> {{tim3.ime}} </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> 
+
+</div>

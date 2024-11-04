@@ -1,0 +1,45 @@
+.hero {
+    background-image: url('/assets/img/ekipa1.jpg') !important;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #fff;
+	padding-top: 3%;
+	padding-bottom: 22%;
+    background-position: center center;
+    text-align: center;
+    font-size: 60px;
+	font-weight: 600;
+    /* border: 3px; */
+    /* padding-top: 3%;
+	padding-bottom: 37%; */
+	/* margin-top: 150px;
+	margin-left: 120px;
+	margin-right: 120px; */
+    /* border-image-width: auto; */
+  }
+.promo-title{
+    /* margin-top: 100px; */
+    font-size: 90px;
+	font-weight: 500;
+	text-align: center;
+    color: #fff;
+}
+
+  .background-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/ekipa3.jpg');
+    background-size: cover;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    filter: brightness(60%);
+    -webkit-filter: brightness(60%);
+    -moz-filter: brightness(60%);
+    -o-filter: brightness(60%);
+    -ms-filter: brightness(60%);
+
+}
